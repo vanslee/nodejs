@@ -1,0 +1,4 @@
+将homework.html页面拆分成三个文件,分别是: index.css,index.js,index.html,并且拆分出来的3个文件,存放到clock目录中
+
+匹配<style></style>的正则: /<style>[\s\S]*<\/style>/
+匹配<script></script>的正则: /<script>[\s\S]*<\/script>/

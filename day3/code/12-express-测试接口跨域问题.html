@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨域问题</title>
+</head>
+
+<body>
+    <button id="get">发送GET请求</button>
+    <button id="post">发送POST请求</button>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+<script>
+    $(function () {
+        $('#get').on('click', function () {
+            $.ajax({
+                type: 'get',
+                url: 'http://127.0.0.1:3030/api/getDate',
+                data: {
+                    name: '李登祥',
+                    age: 22
+                },
+                success: function (res) {
+                    console.log(res);
+                }
+            })
+        })
+    },
+        $('#post').on('click', function () {
+            $.ajax({
+                type: 'post',
+                url: 'http://127.0.0.1:3030/api/getDate',
+                data: {
+                    name: '李知恩',
+                    age: 22
+                },
+                success: function (res) {
+                    console.log(res);
+                }
+            })
+        })
+    )
+
+
+</script>
+
+</html>
